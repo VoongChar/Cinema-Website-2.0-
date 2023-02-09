@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+/* General */
+* {
+ margin: 0;
+ padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+p{
+  line-height: 1.5;
+}
+
+span{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+body  {
+  font-family: 'Arvo', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  height: 100%;
+  width: 100%;
+  background-color:black;
+}
+
+main {
+  max-width: 100%;
+  max-height: 80vh;
+  overflow: contain;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Box Style */
+.card {
+  display: inline-table;
+  justify-content: space-around;  
+  max-width: 50%;
+  margin: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  color: black;
+  background-color: white;
+  border: solid 3px white;
+  border-radius: 5px;
+}
+
+/* Header and Navigation (Top of page) */
+header {
+  display: grid;
+  height: 13vh;
+  max-width:100%;
+  background: #cf0004;
+  align-items: center;
+}
+
+header div.grid {
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 13vh;
+}
+
+/* Logo in Header */
+.logo {
+  display: grid;
+  grid-column: 1 /4;
+  align-content: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+div.logo img {
+  width:auto;
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  display: grid;
+  grid-column: 4 / 8;
+  justify-content: center;
+  align-content: center;
+  max-width: 100%;
+  max-height: 13vh;
+}
+
+.navBar ul {
+  display: inline-flex;
+  max-height: 13vh;  
+  width: 100%;
+  list-style: none;
+  color: #fff;
+  font-size: 1.3rem;
+  justify-content: space-evenly;
+
+}
+
+.navBar ul li {
+  padding: 1.2rem;  
+}
+
+.navBarHover{
+  background: rgba(0, 0, 0,.5);
+  transition: background-color .5s;
+  border-radius: 5px;
+  padding: 1.2rem;
+}
+
+/* Home page core information - Movie posters */
+marquee {
+  display:inline-flex;
+  height: 78vh;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+marquee img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+marquee img:hover{
+  border: solid 2px white;
+  border-radius: 3px;
+}
+
+/* Contact Us Page */
+#contactInfo{
+  text-align: left;
+}
+
+.reference{
+  font-style: italic;
+  font-size: .7rem;
+}
+
+.reference a{
+  color: grey;
+  text-decoration: underline;
+}
+
+.socialMediaIcon{
+  max-height: 100%;
+  max-width: 100%;
+  width:3rem;
+  height:3rem;
+  padding: .8rem;
+}
+
+.socialMediaIcon:hover{
+  border: solid 3px #cf0004;
+  border-radius: 5px;
+}
+
+.enquiryForm {
+  width: 100%;
+  padding: .5rem;
+  font-size: .8rem;
+}
+
+label {
+  padding: 1.5rem;
+}
+
+.locationRadio{
+  padding: 1rem;
+  color: #cf0004;
+}
+
+input[type=text], input[type=tel], input[type=email], select, textarea {
+  display: inline-flex;
+  max-width: 100%;
+  width: 80%;
+  padding: .5rem;
+  margin: .8rem;
+  border: solid 2px #cf0004;
+  border-radius: 5px;
+  background: white;
+}
+
+input[type=submit]{
+  padding: 1rem;
+  border: solid 2px #cf0004;
+  border-radius: 5px;
+  background: #cf0004;
+  color: white;
+}
+
+input[type=submit]:hover{
+  background: #00CFCB;
+  border: #00CFCB;
+  border-radius: 5px;
+  padding: 1.2rem;
+  color:black;
+}
+
+/* Thank you Page */
+.buttons {
+  font-size: 1rem;
+  padding: 1.5rem;
+  border: solid 2px #cf0004;
+  border-radius: 5px;
+  background: #cf0004;
+  color: white;
+  cursor: pointer;
+}
+
+.buttons:hover{
+  font-size: 1rem;
+  background: #00CFCB;
+  border: #00CFCB;
+  border-radius: 5px;
+  padding: 1.5rem;
+  color:black;
+}
+
+/* Screening Page */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  gap: 1rem;
+  max-height: 80vh;
+}
+
+.gallery img {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.gallery img:hover{
+  border: solid 3px white;
+  border-radius: 3px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  position:fixed;
+  justify-content: flex-end;
+  width: 100%;
+  color: #fff;
+  font-size: .8rem;
+}
+
+
+/* Media Screens
+    1. Computers (1024px)
+    2. Tablets (768px)
+    3. Large Phones (425px)
+    4. Medium Phones (375px)
+    5. Small Phones (320px) */
+
+
+/* Media Screens - Computers */
+@media screen and (max-width: 1024px) {
+  
+  header div.logo {
+    padding: 1rem;
+  }
+  
+  .navBar ul li {
+    padding: .6rem;  
+    font-size: 1.2rem;
+  }
+  
+  .navBarHoverr{
+    padding: .6rem;
+  }
+
+}
+
+/* Media Screens - Tablets */
+@media screen and (max-width: 768px) {
+
+  span{
+    font-size: 1.2rem;
+  }
+  
+  .navBar ul li {
+    padding: .4rem;
+    font-size: .9rem;  
+  }
+  
+  .navBarHover{
+    padding: .4rem;
+  }
+  
+  footer {
+    font-size: .9rem;
+  } */
+  
+  /* Location */
+
+  .card{
+    font-size: .9rem;
+    margin: 1rem;
+  }
+
+  iframe{
+    height:auto;
+    width:auto;
+  }
+
+  footer{
+    font-size: .7rem;
+  }
+}
+
+/* Media Screens - Large Phones  */
+@media screen and (max-width: 425px) {
+  
+  span{
+    font-size: 1rem;
+  }
+
+  header {
+    height: 15vh;
+  }
+
+  header div.grid {
+    grid-template-rows: repeat(1, 1fr);
+  }
+  
+  header div.logo {
+    grid-column: 2 / 7;
+    padding: 0;
+  }
+  
+  nav {
+    grid-column: 1 /8;
+  }
+
+  .navBar ul li{    
+    font-size: .8rem;
+    padding:0.5rem;
+  }
+
+  .navBarHover{
+    padding: .5rem;
+  } */
+
+  /* Screening Page */
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: .5rem;
+    gap: .5rem;
+  }
+
+  /* Location */
+
+  .locationBox{
+    display: flex;
+    overflow: hidden;    
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .center{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    justify-content: center;
+    align-content: center;
+  }
+
+  .card{
+    max-width: 100%;
+    max-height: 70%;
+    font-size: .8rem;
+    margin: .5rem;
+    padding: .5rem;
+  }
+
+  /* Footer */
+  footer {
+    font-size: .6rem;
+  }
+}
+
+/* Media Screens - Medium Phones */
+@media screen and (max-width: 375px) {
+
+  .navBar ul li{
+    font-size: .8rem;
+    padding:0.2rem;
+  }
+
+  .navBarHover{
+    padding: .2rem;
+  }
+
+}
+
+/* Media Screens - Small Phones  */
+@media screen and (max-width: 320px) {
+  
+  span{
+    font-size: .8rem;
+  }
+  
+  .navBar ul li{
+    font-size: .6rem;
+    padding:0.3rem;
+  }
+
+  .navBarHover{
+    padding: .2rem;
+  }
+
+  /* Location Page */
+  .locationBox{
+    display: flex;
+    overflow: hidden;    
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card{
+    padding: .2rem;
+    font-size: .6rem;
+    margin: .5rem;
+  }
+
+}
+
+/* End */

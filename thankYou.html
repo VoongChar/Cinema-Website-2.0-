@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Candy Cinemas</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="Style.css">
+    <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script src="Javascript.js" defer></script>
+</head>
+<body>
+    <div class="center">
+        <div class="card">
+        <h1>Thank you for submitting an Enquiry</h1>
+        <br><br> <p>We will respond shortly</p>
+        </div>
+    </div>
+    
+    <div class="center">
+    <a href="index.html"><button class="buttons" id="return">Return Home</button></a>
+    <div class="center">
+    </div>
+
+  <!-- Footer -->
+  <footer>          
+    <p class="copyrightSection"> React component here</p>
+    <ul>
+        <li class="footerHover">Terms & Conditions</li>
+    </ul> 
+    
+
+    </footer>
+
+    <script type="text/babel">
+
+    const copyrightYear = new Date().getFullYear();
+    const copyrightTag = (        
+        <div>    
+            <p> Terms and Conditions</p>
+            <p> &copy; Eye Candy Cinema {copyrightYear}</p>
+        </div>
+        )
+
+
+    ReactDOM.render(
+    copyrightTag, 
+        document.querySelector('footer')
+    );
+
+    </script>
+
+</body>
+</html>

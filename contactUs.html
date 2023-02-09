@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="Style.css">
+    <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script src="Javascript.js" defer></script>
+</head>
+<body>
+    <!-- header and navigation -->
+    <header>            
+        <div class="grid">
+            <div class="logo">
+                <a href="index.html"><img src="images/logowhite.svg" alt="Logo"></a>
+            </div>
+        
+            <nav>
+                <div class="navBar">
+                    <ul>
+                    <a href="index.html"><li class="navHover">Home</li></a>
+                    <a href="ContactUs.html"><li class="navHover">Contact Us</li></a>
+                    <a href="locations.html"><li class="navHover">Locations</li></a> 
+                    <a href="Screening.html"><li class="navHover">Screening</li></a>
+                    <li class="navHover">Coming Soon</li>
+                    </ul>
+            </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- General contact information -->
+        <div class="center">
+            <div class="card" id="contactInfo">
+                <p> <span>Contact Us:</span>
+                    <br><br>Email: 
+                    <br>enquiries@eyecandycinema.com
+                    <br><br>Contact number (Wellington): 
+                    <br>0800 83 83 83
+                    <br><br>Contact number (Auckland): 
+                    <br>0800 666 666
+                    <br><br> Social Media:
+                </p>
+                <img src="images/facebook.svg" class="socialMediaIcon">
+                <img src="images/instagram.svg" class="socialMediaIcon">
+                <img src="images/twitter.svg" class="socialMediaIcon">                
+                <div class="reference">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+            </div>
+            
+            <!-- Enquiry submission form -->
+            <div class="card" id="enquiryForm">
+                <form action="thankYou.html">
+                    <p><span>Submit an Enquiry:</span></p>
+                    
+                    <div class="locationRadio">
+                        <label for="text"> Location: </label><br>
+
+                        <input type="radio" id="Wellington" name="location" value="Wellington" required>                        
+                        <label for="Wellington">Wellington</label>
+
+                        <input type="radio" id="Auckland" name="location" value="Auckland" required>
+                        <label for="Auckland">Auckland</label>
+                    
+                    </div>
+                    <!-- Name -->
+                    <label for="fullname">Name: </label><br>
+                    <input type="text" id="fullname" name="fullname" required> <br>
+                    
+                    <!-- Email -->
+                    <label for="email">Email: </label> <br>
+                    <input type="email" id="emailAd" name="email" pattern='.+@.+\.com' required> <br>
+                    
+                    <!-- Phone -->
+                    <label for="phone">Mobile Number: {Format: 123-123-12345} </label> <br>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{5}" required> <br>
+                    
+                    <!-- Enquiry -->
+                    <label for="enquiry">Enquiry:</label><br>
+                    <input type="text" id="enquiry" name="enquiry" required><br>
+                    
+                    <!-- Submit Button -->
+                    <a href="thankYou.html"><input type="submit" value="SUBMIT">
+                    </a>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+  <!-- Footer -->
+  <footer>          
+    <p class="copyrightSection"> React component here</p>
+    <ul>
+        <li class="footerHover">Terms & Conditions</li>
+    </ul> 
+        
+    </footer>
+
+    <script type="text/babel">
+
+    const copyrightYear = new Date().getFullYear();
+    const copyrightTag = (        
+        <div>    
+            <p> Terms and Conditions</p>
+            <p> &copy; Eye Candy Cinema {copyrightYear}</p>
+        </div>
+        )
+
+
+    ReactDOM.render(
+    copyrightTag, 
+        document.querySelector('footer')
+    );
+
+    </script>
+    
+</body>
+</html>

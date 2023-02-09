@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now Screening</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="Style.css">
+    <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script src="Javascript.js" defer></script>
+</head>
+<body>
+    
+    <!-- header and navigation -->
+    <header>            
+        <div class="grid">
+            <div class="logo">
+                <a href="index.html"><img src="images/logowhite.svg" alt="Logo"></a>
+            </div>
+        
+            <nav>
+                <div class="navBar">
+                    <ul>
+                    <a href="index.html"><li class="navHover">Home</li></a>
+                    <a href="ContactUs.html"><li class="navHover">Contact Us</li></a>
+                    <a href="locations.html"><li class="navHover">Locations</li></a> 
+                    <a href="Screening.html"><li class="navHover">Screening</li></a>
+                    <li class="navHover">Coming Soon</li>
+                    </ul>
+            </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <div class="gallery">
+        <img src="images/blackwidow.png"  alt="Black Widow Poster">
+            
+        <img src="images/captainmarvel.jpeg"  alt="Captain Marvel Poster">
+
+        <img src="images/conjuring3.jpeg" alt="Conjuring 3 Poster">
+    
+        <img src="images/Cruella.jpg"  alt="Cruella Poster">
+        
+        <img src="images/Coraline.jpg"  alt="Coraline Poster"> 
+        
+        <img src="images/escaperoom2.jpeg"  alt="Escape Room 2 Poster">
+        
+        <img src="images/findingdory.jpeg"  alt="Finding Dory Poster">
+
+        <img src="images/Joker.jpeg"  alt="Joker Poster">
+
+        <img src="images/lastnightinsoho.jpeg"  alt="Last Night in Soho Poster">
+        
+        <img src="images/Midsommar.jpg"  alt="Midsommar Poster">
+
+        <img src="images/notimetodie.jpeg"  alt="No Time to Die Poster">
+        
+        <img src="images/parasite.jpeg"  alt="Parasite Poster">
+
+        <img src="images/quietplace.jpeg" alt="A Quiet Place 2 Poster">
+        
+        <img src="images/spacejam.jpeg"  alt="Space Jam Poster">
+        
+        <img src="images/thorragnarok.jpg"  alt="Thor Ragnarok Poster"
+
+        <img src="images/Us.jpeg"  alt="Us Poster">
+        
+        </div>
+
+    </main>
+    
+  <!-- Footer -->
+    <footer>          
+    <p class="copyrightSection"> React component here</p>
+    <ul>
+        <li class="footerHover">Terms & Conditions</li>
+    </ul> 
+    
+
+    </footer>
+
+    <script type="text/babel">
+
+    const copyrightYear = new Date().getFullYear();
+    const copyrightTag = (        
+        <div>    
+            <p> Terms and Conditions</p>
+            <p> &copy; Eye Candy Cinema {copyrightYear}</p>
+        </div>
+        )
+
+
+    ReactDOM.render(
+    copyrightTag, 
+        document.querySelector('footer')
+    );
+
+    </script>
+
+</body>
+</html>

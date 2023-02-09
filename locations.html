@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="Style.css">
+    <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script src="Javascript.js" defer></script>
+</head>
+<body>
+    <!-- header and navigation -->
+    <header>            
+        <div class="grid">
+            <div class="logo">
+                <a href="index.html"><img src="images/logowhite.svg" alt="Logo"></a>
+            </div>
+        
+            <nav>
+                <div class="navBar">
+                    <ul>
+                    <a href="index.html"><li class="navHover">Home</li></a>
+                    <a href="ContactUs.html"><li class="navHover">Contact Us</li></a>
+                    <a href="locations.html"><li class="navHover">Locations</li></a> 
+                    <a href="Screening.html"><li class="navHover">Screening</li></a>
+                    <li class="navHover">Coming Soon</li>
+                    </ul>
+            </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Locations info side by side -->
+        <div class="center">
+            <div class="card">
+                <p><span>WELLINGTON:</span></p>
+                <p>Address: 29 Wigan Street, Te Aro, Wellington 6011</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.5822336336964!2d174.77303581522506!3d-41.296195848938645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd8ef890141%3A0x8db069d6378c32df!2sLight%20House%20Cuba!5e0!3m2!1sen!2snz!4v1624943552329!5m2!1sen!2snz" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="card">
+                <p><span>AUCKLAND:</span><p>
+                <p>Address: LynnMall, 3058 Great North Road, New Lynn, Auckland 0600</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.297857283443!2d174.68515731506147!3d-36.907142190480656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d414c5f831b0b%3A0x40e6d07eeab1fb4f!2sReading%20Cinemas%20Lynnmall!5e0!3m2!1sen!2snz!4v1624944582362!5m2!1sen!2snz" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+   <footer>          
+    <p class="copyrightSection"> React component here</p>
+    <ul>
+        <li class="footerHover">Terms & Conditions</li>
+    </ul> 
+        
+    </footer>
+
+    <script type="text/babel">
+
+    const copyrightYear = new Date().getFullYear();
+    const copyrightTag = (        
+        <div>    
+            <p> Terms and Conditions</p>
+            <p> &copy; Eye Candy Cinema {copyrightYear}</p>
+        </div>
+        )
+
+
+    ReactDOM.render(
+    copyrightTag, 
+        document.querySelector('footer')
+    );
+
+    </script>
+
+</body>
+</html>
